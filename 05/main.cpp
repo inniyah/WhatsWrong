@@ -1,5 +1,3 @@
-// https://www.learncpp.com/cpp-programming/eight-c-programming-mistakes-the-compiler-wont-catch/
-
 #include <iostream>
 
 class Base {

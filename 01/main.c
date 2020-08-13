@@ -1,5 +1,5 @@
 int main() {
-	char * data = (int *)getData();
+	char * data = (char *)getData();
 	printf("%s", data);
 }
 
