@@ -8,11 +8,13 @@ struct Data {
 	virtual ~Data() {}
 };
 
+Data data[3];
+
 int main() {
-	Data data[5];
-	memset(data, 0, sizeof(data));
-	for (int i=0; i<5; i++)
-		printf("%d %d\n", data[i].v1, data[i].v2);
+	memset(data, 0, 2 * sizeof(data[0])); // Set the first two elements to zero
+	for (int i = 0; i < sizeof(data)/sizeof(data[0]); i++) // Print all the elements
+		printf("#%d = (%d, %d); ", i, data[i].v1, data[i].v2);
+	printf("\n");
 }
 
 // Result: Segmentation Fault
